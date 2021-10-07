@@ -30,12 +30,12 @@ function getTextObjects(designData: any) {
       const textProperties = {
         type: ObjectTypes.TEXTBOX,
 
-        fill: `rgba(${color.r},${color.g}, ${color.b}, ${color.a})`,
         metadata: {
           text: text!.value,
           fontSize: defaultStyle.font.size,
           textAlign: defaultStyle.font.align,
           fontFamily: defaultStyle.font.name,
+          fill: `rgba(${color.r},${color.g}, ${color.b}, ${color.a})`,
         },
       };
 
