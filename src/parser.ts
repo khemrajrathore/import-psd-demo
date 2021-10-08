@@ -24,18 +24,25 @@ function getTextObjects(designData: any) {
         height: bounds.height,
         zIndex: index,
       };
-      const text = layer.text;
-      const defaultStyle = text!.defaultStyle;
-      const color = defaultStyle.color;
-      const textProperties = {
-        type: ObjectTypes.TEXTBOX,
+      // const text = layer.text;
+      // const defaultStyle = text!.defaultStyle;
+      // const color = defaultStyle.color;
+      // const textProperties = {
+      //   type: ObjectTypes.TEXTBOX,
 
+      //   metadata: {
+      //     text: text!.value,
+      //     fontSize: defaultStyle.font.size,
+      //     textAlign: defaultStyle.font.align,
+      //     fontFamily: defaultStyle.font.name,
+      //     fill: `rgba(${color.r},${color.g}, ${color.b}, ${color.a})`,
+      //   },
+      // };
+
+      const textProperties = {
+        type: ObjectTypes.IMAGE,
         metadata: {
-          text: text!.value,
-          fontSize: defaultStyle.font.size,
-          textAlign: defaultStyle.font.align,
-          fontFamily: defaultStyle.font.name,
-          fill: `rgba(${color.r},${color.g}, ${color.b}, ${color.a})`,
+          src: layer.bitmap.filename,
         },
       };
 
