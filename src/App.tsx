@@ -12,7 +12,8 @@ import { useState } from "react";
 
 function App() {
   const [isUploading, setIsUploading] = useState(false);
-
+  const newVariable = "newVariable";
+  
   const handlers = useHandlers();
   const importDesign = async (file: File) => {
     let designStatus = "pending";
